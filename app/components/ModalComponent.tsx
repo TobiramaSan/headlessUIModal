@@ -27,25 +27,6 @@ const ModalComponent: React.FC<modelComponentProps> = ({
   };
 
   return (
-    // <Dialog open={isOpen} onClose={() => closeModal} className="relative z-50">
-    //   {/* The backdrop, rendered as a fixed sibling to the panel container */}
-    //   <div className="fixed inset-0 bg-black/30" aria-hidden="true" />
-    //   <div className="fixed inset-0 flex w-screen items-center justify-center p-4">
-    //     <Dialog.Panel className="w-full max-w-sm rounded bg-white">
-    //       <Dialog.Title>{title}</Dialog.Title>
-    //       <Dialog.Description>{description}</Dialog.Description>
-
-    //       <p>{body}</p>
-
-    //       {/*
-    //       You can render additional buttons to dismiss your dialog by setting
-    //       `isOpen` to `false`.
-    //     */}
-    //       <button onClick={closeModal}>Cancel</button>
-    //       <button onClick={handleDeactivate}>Deactivate</button>
-    //     </Dialog.Panel>
-    //   </div>
-    // </Dialog>
     <Transition appear show={isOpen} as={Fragment}>
       <Dialog as="div" className="relative z-10" onClose={closeModal}>
         <TransitionChild
